@@ -59,7 +59,7 @@ export default function Triptitch() {
 
       <main className="bg-white">
         <FullScreenUI>
-          <div className="flex flex-wrap justify-center content-center gap-8 m-8 max-w-screen-lg shrink-0">
+          <div className="flex flex-wrap flex-col justify-center content-center gap-8 m-8 max-w-screen-lg shrink-0 trip:flex-row">
             <BrandCard
               href="/"
               title={content.brands[0].title}

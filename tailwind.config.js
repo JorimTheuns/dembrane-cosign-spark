@@ -17,7 +17,9 @@ module.exports = {
       blink: "#4169E1",
       grey: "#E9EAEB",
     },
-    extend: {},
+    extend: {
+      screens: { trip: "865px" },
+    },
   },
   plugins: [],
 };
