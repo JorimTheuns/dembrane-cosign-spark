@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -19,6 +20,9 @@ module.exports = {
     },
     extend: {
       screens: { trip: "865px" },
+      fontFamily: {
+        sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],

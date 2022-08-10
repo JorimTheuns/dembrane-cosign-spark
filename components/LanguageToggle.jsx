@@ -4,7 +4,7 @@ import MyLink from "./MyLink";
 
 export default function LanguageToggle({ locales, asPath, click }) {
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-2 flex-wrap justify-center">
       {locales.map((l, i) => {
         const lang = getSiblingValue("locale", l, "text", languages.languages);
         const href = asPath.toString() + click.toString();
