@@ -49,7 +49,6 @@ export default function Triptitch() {
       },
     ],
   };
-  console.log(content.brands[0][locale]);
 
   return (
     <div className="">
