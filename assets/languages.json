@@ -1,0 +1,14 @@
+{
+  "languages": [
+    {
+      "locale": "en-UK",
+      "text": "English 🇬🇧",
+      "emoji": "🇬🇧"
+    },
+    {
+      "locale": "nl-NL",
+      "text": "Nederlands 🇳🇱",
+      "emoji": "🇳🇱"
+    }
+  ]
+}
