@@ -21,16 +21,7 @@ export default function BrandCard({
   const [activeCard, setActiveCard] = useState(false);
   return (
     <Link overlay type="button" href={href} locale={locale}>
-      <div className="flex flex-col items-center gap-4 max-w-[15rem] max-h-screen">
-        <h1
-          className={`text-4xl font-bold transition-all duration-1000 ease-in-out" + ${
-            activeCard
-              ? "translate-y-0 opacity-100"
-              : "translate-y-[10px] opacity-0"
-          }`}
-        >
-          {title}
-        </h1>
+      <div className="flex flex-col items-left gap-4 max-h-screen">
         <VisibilitySensor
           onChange={(isVisible) => {
             if (isMobile) {
@@ -51,11 +42,11 @@ export default function BrandCard({
             }}
             className=""
           >
-            <div className="active:scale-90 hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer relative max-h-[50vh]">
+            <div className="active:scale-90 hover:scale-95 transition-all duration-150 ease-in-out cursor-pointer relative">
               <div className="">
                 <img
                   src={bawLink}
-                  className={`max-h-[40vh] transition-all duration-500 ease-in-out " + ${
+                  className={`transition-all duration-500 ease-in-out " + ${
                     activeCard ? "opacity-0" : "opacity-100"
                   }`}
                 />
@@ -63,7 +54,7 @@ export default function BrandCard({
               <div className=" top-0 left-0 absolute">
                 <img
                   src={colorLink}
-                  className={`max-h-[40vh] transition-all duration-500 ease-in-out " + ${
+                  className={`transition-all duration-500 ease-in-out " + ${
                     activeCard ? "opacity-100" : "opacity-0"
                   }`}
                 />
@@ -72,14 +63,16 @@ export default function BrandCard({
           </div>
         </VisibilitySensor>
         <div
-          className={`max-w-[250px] text-center transition-all duration-1000 ease-in-out" + ${
+          className={`text-left pl-4 transition-all duration-1000 ease-in-out" + ${
             activeCard
               ? "translate-y-0 opacity-100"
               : "translate-y-[-10px] opacity-0"
           }`}
         >
-          <h1 className="text-2xl font-bold">{subtitle}</h1>
-          <p className="text-lg">{tagLine}</p>
+          <h1 className="text-6xl sm:text-4xl xl:text-6xl font-bold pb-4">
+            {title}
+          </h1>
+          <p className="text-2xl sm:text-xl xl:text-2xl">{tagLine}</p>
         </div>
       </div>
     </Link>
