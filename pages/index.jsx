@@ -118,7 +118,7 @@ export default function Home() {
               {/*<p>{content.welcome[locale]}</p>*/}
               <div className="flex flex-col flex-wrap justify-center content-center gap-2">
                 <LanguageToggle
-                  click={"triptitch"}
+                  click={"home"}
                   locales={locales}
                   asPath={asPath}
                 ></LanguageToggle>

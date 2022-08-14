@@ -4,6 +4,7 @@ import MyLink from "@components/MyLink";
 import languages from "../assets/languages.json";
 import { getSiblingValue } from "./_app";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useState, useEffect } from "react";
 import BrandCard from "@components/BrandCard";
 
@@ -118,10 +119,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white max-w-6xl p-8 mx-auto">
+      <main className="bg-white max-w-6xl mx-auto">
         <div
           id="hero"
-          className="min-h-screen grid grid-cols-3 grid-rows-3 gap-8 p-8 place-content-center"
+          className="min-h-screen grid grid-cols-3 grid-rows-2 gap-8 p-8 place-content-center"
         >
           <div className="col-span-3 place-self-center sm:col-span-2 md:row-span-3 md:col-span-1">
             <img src="/svg/new-logos_DCS-logo.svg" className=""></img>
@@ -130,7 +131,17 @@ export default function Home() {
             <h1 className="text-6xl font-bold pb-8">
               Dream, Think, Act. Together
             </h1>
-            <Button className="">Contact Us</Button>
+            <Button
+              dataTallyOpen="w5BVvo"
+              dataTallyLayout="modal"
+              dataTallyWidth="600"
+              dataTallyOverlay="1"
+              dataTallyEmojiText="🤙"
+              dataTallyEmojiAnimation="heart-beat"
+              className=""
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
         <div
@@ -174,12 +185,12 @@ export default function Home() {
           id="three"
           className="min-h-screen p-8 max-h-screen grid grid-rows-6 grid-cols-6 gap-8"
         >
-          <div className="row-span-2 col-span-4 text-4xl font-bold self-end">
+          <div className="row-span-2 row-start-1 col-span-full sm:col-span-4 text-4xl font-bold self-end">
             <h1 className="pb-4">Long term vision</h1>
             <h1 className="pb-4">Brought down to earth</h1>
             <h1 className="pb-4">Making impact in communities</h1>
           </div>
-          <div className="col-span-2 row-span-2 row-end-6">
+          <div className="col-span-2 row-span-2 row-start-5 sm:row-start-4">
             <BrandCard
               href="/"
               title={content.cards[0].title}
@@ -190,7 +201,7 @@ export default function Home() {
             ></BrandCard>
           </div>
 
-          <div className="col-span-2 row-span-2 row-end-5">
+          <div className="col-span-2 row-span-2 row-start-4 sm:row-start-3">
             <BrandCard
               href="/"
               bawLink="/svg/new-logos_Cosign-logo-black.svg"
@@ -200,7 +211,7 @@ export default function Home() {
               tagLine={content.cards[1][locale].tagline}
             ></BrandCard>
           </div>
-          <div className="col-span-2 row-span-2 row-end-4 col-end-7">
+          <div className="col-span-2 row-span-2 row-start-3 sm:row-start-2 col-end-7">
             <BrandCard
               href="/"
               bawLink="/svg/new-logos_Spark-logo-black.svg"
